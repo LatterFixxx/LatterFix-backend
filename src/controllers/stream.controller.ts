@@ -1,4 +1,4 @@
-import type { Request, Response } from 'express';
+import { Request, Response } from 'express';
 import { createStreamSchema } from '../validators/stream.validator.js';
 
 export const createStream = async (req: Request, res: Response) => {
@@ -15,10 +15,10 @@ export const createStream = async (req: Request, res: Response) => {
       ...validatedData
     });
   } catch (error: any) {
-    if (error.name === 'ZodError') {
+    if (error.name === 'ZodError' || error.issues) {
       return res.status(400).json({
         message: 'Validation failed',
-        errors: error.errors
+        errors: error.errors || error.issues
       });
     }
     
