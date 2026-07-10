@@ -2,7 +2,7 @@
 
 ## Overview
 
-FlowFi API uses **URL-based versioning** to ensure backward compatibility and allow for breaking changes without disrupting existing consumers.
+latterfix API uses **URL-based versioning** to ensure backward compatibility and allow for breaking changes without disrupting existing consumers.
 
 ## Versioning Scheme
 
@@ -124,10 +124,10 @@ X-API-Migration-Path: /v1/streams
 1. **Update base URL** to include version:
    ```javascript
    // Before
-   const response = await fetch('http://api.flowfi.io/streams');
+   const response = await fetch('http://api.latterfix.io/streams');
    
    // After
-   const response = await fetch('http://api.flowfi.io/v1/streams');
+   const response = await fetch('http://api.latterfix.io/v1/streams');
    ```
 
 2. **Check for deprecation headers**:
@@ -141,7 +141,7 @@ X-API-Migration-Path: /v1/streams
 
 3. **Monitor health endpoint** for supported versions:
    ```javascript
-   const health = await fetch('http://api.flowfi.io/health');
+   const health = await fetch('http://api.latterfix.io/health');
    const { apiVersions } = await health.json();
    console.log('Supported versions:', apiVersions.supported);
    ```

@@ -1,6 +1,6 @@
 # Sandbox Mode
 
-Sandbox mode allows developers and new users to experiment with FlowFi API without touching real funds or affecting production data.
+Sandbox mode allows developers and new users to experiment with latterfix API without touching real funds or affecting production data.
 
 ## Overview
 
@@ -97,7 +97,7 @@ Set `SANDBOX_DATABASE_URL` to use a completely separate database:
 SANDBOX_DATABASE_URL=file:./sandbox.db
 
 # Or use a different PostgreSQL database
-SANDBOX_DATABASE_URL=postgresql://user:pass@localhost:5432/flowfi_sandbox
+SANDBOX_DATABASE_URL=postgresql://user:pass@localhost:5432/latterfix_sandbox
 ```
 
 ## Usage Examples

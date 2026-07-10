@@ -1,6 +1,6 @@
 # Real-Time Event Streaming
 
-FlowFi uses **Server-Sent Events (SSE)** for real-time updates to clients.
+latterfix uses **Server-Sent Events (SSE)** for real-time updates to clients.
 
 ## Why SSE over WebSockets?
 

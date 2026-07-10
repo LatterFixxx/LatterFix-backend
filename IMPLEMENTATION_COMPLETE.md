@@ -2,7 +2,7 @@
 
 ## Summary
 
-Implemented **Server-Sent Events (SSE)** for real-time stream updates in FlowFi backend.
+Implemented **Server-Sent Events (SSE)** for real-time stream updates in latterfix backend.
 
 ## Architecture Decision
 

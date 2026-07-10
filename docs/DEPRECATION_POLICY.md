@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document outlines FlowFi's policy for deprecating and sunsetting API endpoints. Our goal is to provide clear communication and sufficient time for consumers to migrate to new versions.
+This document outlines latterfix's policy for deprecating and sunsetting API endpoints. Our goal is to provide clear communication and sufficient time for consumers to migrate to new versions.
 
 ## Principles
 
@@ -184,10 +184,10 @@ Always use versioned endpoints:
 
 ```javascript
 // ✅ Good - Explicit version
-const api = 'https://api.flowfi.io/v1';
+const api = 'https://api.latterfix.io/v1';
 
 // ❌ Bad - No version
-const api = 'https://api.flowfi.io';
+const api = 'https://api.latterfix.io';
 ```
 
 ### 3. Plan Migrations Early
@@ -202,7 +202,7 @@ const api = 'https://api.flowfi.io';
 Check supported versions:
 
 ```javascript
-const health = await fetch('https://api.flowfi.io/health');
+const health = await fetch('https://api.latterfix.io/health');
 const { apiVersions } = await health.json();
 
 if (!apiVersions.supported.includes('v1')) {

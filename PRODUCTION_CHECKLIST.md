@@ -132,7 +132,7 @@
 NODE_ENV=production
 PORT=3001
 REDIS_URL=redis://redis:6379
-ALLOWED_ORIGINS=https://flowfi.app,https://app.flowfi.app
+ALLOWED_ORIGINS=https://latterfix.app,https://app.latterfix.app
 JWT_SECRET=<your-secret>
 MAX_SSE_CONNECTIONS=10000
 SSE_HEARTBEAT_INTERVAL=30000
@@ -182,20 +182,20 @@ volumes:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flowfi-backend
+  name: latterfix-backend
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: flowfi-backend
+      app: latterfix-backend
   template:
     metadata:
       labels:
-        app: flowfi-backend
+        app: latterfix-backend
     spec:
       containers:
       - name: backend
-        image: flowfi/backend:latest
+        image: latterfix/backend:latest
         env:
         - name: REDIS_URL
           value: redis://redis-service:6379
@@ -214,7 +214,7 @@ spec:
 
 - [ ] Test SSE connection from production domain
   ```bash
-  curl -N https://api.flowfi.app/events/subscribe?all=true
+  curl -N https://api.latterfix.app/events/subscribe?all=true
   ```
 
 - [ ] Verify reconnection behavior
@@ -227,7 +227,7 @@ spec:
   import http from 'k6/http';
   
   export default function() {
-    http.get('https://api.flowfi.app/events/subscribe?all=true');
+    http.get('https://api.latterfix.app/events/subscribe?all=true');
   }
   ```
 
@@ -268,12 +268,12 @@ If issues occur:
 
 1. **Immediate**: Route traffic to old version
    ```bash
-   kubectl rollout undo deployment/flowfi-backend
+   kubectl rollout undo deployment/latterfix-backend
    ```
 
 2. **Investigate**: Check logs and metrics
    ```bash
-   kubectl logs -f deployment/flowfi-backend
+   kubectl logs -f deployment/latterfix-backend
    ```
 
 3. **Fix**: Address issues in staging

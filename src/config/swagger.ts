@@ -4,13 +4,13 @@ const options: swaggerJsdoc.Options = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'FlowFi API',
+      title: 'latterfix API',
       version: '1.0.0',
-      description: `API documentation for FlowFi - Real-time payment streaming on Stellar
+      description: `API documentation for latterfix - Real-time payment streaming on Stellar
 
 ## Sandbox Mode
 
-FlowFi API supports sandbox mode for testing without affecting production data.
+latterfix API supports sandbox mode for testing without affecting production data.
 
 **Enable Sandbox Mode:**
 - Header: \`X-Sandbox-Mode: true\`
@@ -24,8 +24,8 @@ FlowFi API supports sandbox mode for testing without affecting production data.
 
 See [Sandbox Mode Documentation](../docs/SANDBOX_MODE.md) for details.`,
       contact: {
-        name: 'FlowFi Team',
-        url: 'https://github.com/LabsCrypt/flowfi',
+        name: 'latterfix Team',
+        url: 'https://github.com/LabsCrypt/latterfix',
       },
       license: {
         name: 'MIT',
@@ -38,7 +38,7 @@ See [Sandbox Mode Documentation](../docs/SANDBOX_MODE.md) for details.`,
         description: 'Development server (v1)',
       },
       {
-        url: 'https://api.flowfi.io/v1',
+        url: 'https://api.latterfix.io/v1',
         description: 'Production server (v1)',
       },
     ],

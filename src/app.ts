@@ -21,7 +21,7 @@ app.use(sandboxMiddleware);
 // Swagger UI setup
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
     customCss: '.swagger-ui .topbar { display: none }',
-    customSiteTitle: 'FlowFi API Documentation',
+    customSiteTitle: 'latterfix API Documentation',
 }));
 
 // Serve raw OpenAPI spec as JSON
@@ -90,10 +90,10 @@ app.use('/events', (req: Request, res: Response, next) => {
  *           text/plain:
  *             schema:
  *               type: string
- *               example: FlowFi Backend is running
+ *               example: latterfix Backend is running
  */
 app.get('/', (req: Request, res: Response) => {
-    res.send('FlowFi Backend is running');
+    res.send('latterfix Backend is running');
 });
 
 /**
