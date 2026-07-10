@@ -1,6 +1,6 @@
 # SSE Implementation Summary
 
-## What Was Implemented
+## What Was Implemented Here
 
 ✅ **Server-Sent Events (SSE)** for real-time stream updates  
 ✅ Subscription filtering (by stream ID, user, or all events)  
